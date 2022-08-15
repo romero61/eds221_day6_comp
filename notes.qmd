@@ -1,0 +1,64 @@
+---
+title: "Tidy Data and tidyr"
+format: html
+editor: visual
+---
+
+## Warm up
+
+```{r}
+for (i in 1:3){
+  print(paste0 ())
+}
+
+# see also seq_along(from = 1, to  vecor 1)
+```
+
+# TIDY DATA
+
+**variable**: a characteristic that is being measured, counted or\
+described with data. Like: car type, salinity, year, population, or\
+whale mass.
+
+\
+**observation**: a single "data point" for which the measure, count or\
+description of one or more variables is recorded. For example, if\
+you are recording variables height, mass, and color of dragons, then\
+each dragon is an observation.
+
+**value**: the recorded measure, count or description of a variable.\
+
+# Messy data
+
+-   Columns are values - rows are variables
+
+-   Variables in Columns and Rows
+
+-   Multivariables in a single column
+
+# Why tidy data
+
+-   Efficiency
+
+-   Collaboration
+
+-   Reuse
+
+-   Generalizability
+
+# Meet tidyr::pivot\_\*
+
+\
+Use tidyr::pivot_longer() to gather\
+columns (convert from wide to long format)\
+Use tidyr::pivot_wider()to spread\
+columns (convert from long to wide format)
+
+![](images/paste-E5D47302.png)
+
+dogs_longer \<- dogs %\>%\
+tidyr::pivot_longer(week_1:week_3,\
+names_to = week,\
+values_to = miles)\
+\
+![](images/paste-72DD5D09.png)
